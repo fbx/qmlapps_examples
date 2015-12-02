@@ -1,0 +1,11 @@
+{
+    "name": "stack",
+    "identifier": "org.example.stack",
+    "description": "Page stack example",
+    "entryPoints": {
+        "main": {
+            "file": "main.qml",
+            "default": true
+        }
+    }
+}
