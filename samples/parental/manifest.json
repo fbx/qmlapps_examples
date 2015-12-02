@@ -1,0 +1,15 @@
+{
+    "name": "Parental code test",
+    "description": "Teste le code parental",
+    "identifier": "fr.freebox.parental_test",
+    "icon": "icon.png",
+    "capabilities": {
+        "morality_18": "optional"
+    },
+    "entryPoints": {
+        "main": {
+            "file": "main.qml",
+            "default": true
+        }
+    }
+}
