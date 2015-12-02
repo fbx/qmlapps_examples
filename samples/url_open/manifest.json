@@ -1,0 +1,12 @@
+{
+    "name": "URL opener code test",
+    "description": "Teste les URLs",
+    "identifier": "org.example.url_open",
+    "icon": "icon.png",
+    "entryPoints": {
+        "main": {
+            "file": "main.qml",
+            "default": true
+        }
+    }
+}
