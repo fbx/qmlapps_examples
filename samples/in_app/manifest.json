@@ -1,0 +1,15 @@
+{
+    "name": "InApp test",
+    "description": "Teste les achats",
+    "identifier": "fr.freebox.inappTest",
+    "capabilities": {
+        "in_app_purchase": "required"
+    },
+    "entryPoints": {
+        "classic": {
+            "file": "main.qml",
+            "default": true,
+            "uiFlavor": "classic"
+        }
+    }
+}
