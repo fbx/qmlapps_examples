@@ -2,14 +2,14 @@ import QtQuick 2.4
 import fbx.application 1.0
 
 Application {
-    property int size: 100
-    property int ease: 10
+    property int size: 100 /* ball diameter */
+    property int ease: 10 /* hole is a bit larger than ball */
 
-    property bool play: true
-    property bool win
+    property bool play: true /* whether animation is running or not */
+    property bool win /* if hole was reached */
 
-    property int dx: Math.floor((Math.random() * 10) + 1)
-    property int dy: Math.floor((Math.random() * 10) + 1)
+    property int dx: Math.floor((Math.random() * 10) + 1) /* x speed */
+    property int dy: Math.floor((Math.random() * 10) + 1) /* y speed */
 
     Rectangle {
         id: hole
@@ -46,6 +46,7 @@ Application {
         Keys.onDownPressed: dy++;
 
         Text {
+            /* speed help text */
             visible: ball.help
             anchors.centerIn: parent
             text: "(" + dx + "," + dy + ")"
@@ -63,6 +64,7 @@ Application {
     }
 
     Text {
+        /* winner text */
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
         anchors.verticalCenterOffset: size + ease
