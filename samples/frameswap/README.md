@@ -1,5 +1,5 @@
 # frameswap
-Mini jeu utilisant le signal Application.onFrameSwap().
+Mini jeu utilisant le signal Application.onFrameSwapped().
 
 Ce signal est déclenché à chaque fin de rendu graphique.
 
