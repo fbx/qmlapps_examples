@@ -75,7 +75,6 @@ Application {
         if (play == true && dx == 0 && dy == 0) {
             play = false;
             ball.help = false;
-            console.log(ball.centerX, ball.centerY, hole.centerX, hole.centerY);
 
             if (((ball.centerX <= hole.centerX && ball.centerX > hole.centerX - ease) ||
                     (ball.centerX >= hole.centerX && ball.centerX < hole.centerX + ease)) &&
