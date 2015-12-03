@@ -1,0 +1,11 @@
+{
+    "name": "BallBox",
+    "identifier": "org.example.frameswap",
+    "description": "Mini jeu utilisant onFrameSwap",
+    "entryPoints": {
+        "main": {
+            "file": "main.qml",
+            "default": true
+        }
+    }
+}
