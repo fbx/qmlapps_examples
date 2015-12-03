@@ -1,4 +1,4 @@
-# parental
+# stack
 Mini exemple utilisant la fonction de chargement de Page.
 
 Une Page est un fichier QML qui est chargé à la demande.
