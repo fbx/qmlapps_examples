@@ -1,0 +1,14 @@
+{
+    "name": "rss_video",
+    "identifier": "org.example.rss_video",
+    "description": "Example of RSS video browser",
+    "capabilities": {
+        "net_wan": "required"
+    },
+    "entryPoints": {
+        "main": {
+            "file": "main.qml",
+            "default": true
+        }
+    }
+}
