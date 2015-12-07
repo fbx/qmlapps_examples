@@ -1,4 +1,4 @@
-# in_app
+# in app
 Mini exemple utilisant les fonction d'achat in-app.
 
 Cet exemple n'étant pas sur le FreeStore, les items d'achat in-app sont
