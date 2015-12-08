@@ -2,7 +2,6 @@ import QtQuick 2.4
 
 Item {
     property string title
-    property string pubDate
     property string content
     property string type
     property string thumbnail

@@ -9,15 +9,14 @@ Application {
     id: main
 
     XmlListModel {
-        id: flocks
+        id: trailers
         namespaceDeclarations: "declare namespace media='http://search.yahoo.com/mrss/';"
         source: "https://archive.org/services/collection-rss.php?collection=TheVideoCellarCollection"
         query: "/rss/channel/item"
 
         XmlRole { name: "title"; query: "media:title/string()" }
-        XmlRole { name: "pubDate"; query: "pubDate/string()" }
-        XmlRole { name: "content"; query: "media:content/@url/string()" }
-        XmlRole { name: "type"; query: "media:content/@type/string()" }
+        XmlRole { name: "content"; query: "enclosure/@url/string()" }
+        XmlRole { name: "type"; query: "enclosure/@type/string()" }
         XmlRole { name: "thumbnail"; query: "media:thumbnail/@url/string()" }
     }
 
@@ -31,14 +30,13 @@ Application {
         anchors.margins: 5
         width: parent.width / 2
 
-        model: flocks
+        model: trailers
 
         delegate: VideoItem {
             width: parent.width
             height: 120
 
             title: model.title
-            pubDate: model.pubDate
             content: model.content
             type: model.type
             thumbnail: model.thumbnail
@@ -72,16 +70,18 @@ Application {
         }
     }
 
+
     VideoOutput {
         id: video
         source: player
-
-        anchors.left: list.right
-        anchors.right: parent.right
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        anchors.margins: 5
+        anchors {
+            left: list.right
+            right: parent.right
+            top: parent.top
+            bottom: parent.bottom
+        }
     }
+
 
     Loading {
         id: loading
