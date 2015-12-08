@@ -42,11 +42,19 @@ Application {
             thumbnail: model.thumbnail
 
             Keys.onReturnPressed: {
-                if (content) {
+                if (!content) {
+                    return Dialog.create(main, popup, { title: "Erreur", text: "Pas de contenu", buttons: ['ok']});
+                }
+
+                if (content != player.source) {
                     loading.visible = true;
                     player.source = content;
                 } else {
-                    return Dialog.create(main, popup, { title: "Erreur", text: "Pas de contenu", buttons: ['ok']});
+                    if (player.playbackState == MediaPlayer.PlayingState) {
+                        player.pause();
+                    } else {
+                        player.play();
+                    }
                 }
             }
         }
@@ -80,13 +88,13 @@ Application {
             top: parent.top
             bottom: parent.bottom
         }
-    }
 
 
-    Loading {
-        id: loading
-        visible: false
-        anchors.centerIn: parent
+        Loading {
+            id: loading
+            visible: false
+            anchors.centerIn: parent
+        }
     }
 
     Component {
