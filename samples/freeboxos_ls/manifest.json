@@ -1,0 +1,15 @@
+{
+    "name": "FreeboxOS Files",
+    "description": "FreeboxOS file listing",
+    "identifier": "org.example.freeboxos-ls",
+    "capabilities": {
+        "net_gw": "required",
+        "gw_explorer": "required"
+    },
+    "entryPoints": {
+        "classic": {
+            "file": "main.qml",
+            "default": true
+        }
+    }
+}
