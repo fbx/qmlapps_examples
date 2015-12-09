@@ -61,7 +61,7 @@ Application {
 
         highlight: Rectangle {
             color: "transparent"
-            border.color: "#0088BB"
+            border.color: "dodgerblue"
             border.width: 3
             radius: 2
         }
