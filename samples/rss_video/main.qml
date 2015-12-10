@@ -76,6 +76,12 @@ Application {
         onPlaying: {
             loading.visible = false;
         }
+
+        onErrorChanged: {
+            if (error != MediaPlayer.NoError) {
+                App.notifyUser(errorString);
+            }
+        }
     }
 
 
