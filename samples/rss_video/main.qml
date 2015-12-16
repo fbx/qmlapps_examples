@@ -4,6 +4,7 @@ import QtMultimedia 5.5
 import fbx.application 1.0
 import fbx.ui.control 1.0
 import fbx.ui.dialog 1.0
+import fbx.ui.menu 1.0 as M
 
 Application {
     id: main
@@ -65,6 +66,8 @@ Application {
             border.width: 3
             radius: 2
         }
+
+        Keys.onMenuPressed: menu.focus = true;
     }
 
     MediaPlayer {
@@ -100,6 +103,15 @@ Application {
             id: loading
             visible: false
             anchors.centerIn: parent
+        }
+    }
+
+    M.View {
+        id: menu
+        returnFocusTo: list
+        root: M.Menu {
+            title: "Liste"
+            M.Action { text: "Recharger"; onClicked: trailers.reload(); }
         }
     }
 
