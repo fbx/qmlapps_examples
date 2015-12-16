@@ -23,6 +23,9 @@ Application {
 
     ListView {
         id: list
+
+        property bool details: false
+
         focus: true
         orientation: ListView.Vertical
         anchors.left: parent.left
@@ -41,6 +44,7 @@ Application {
             content: model.content
             type: model.type
             thumbnail: model.thumbnail
+            details: list.details
 
             Keys.onReturnPressed: {
                 if (!content) {
@@ -112,6 +116,7 @@ Application {
         root: M.Menu {
             title: "Liste"
             M.Action { text: "Recharger"; onClicked: trailers.reload(); }
+            M.Action { text: "Détails"; onClicked: list.details = !list.details; }
         }
     }
 

@@ -5,6 +5,7 @@ Item {
     property string content
     property string type
     property string thumbnail
+    property bool details
 
     Image {
         id: img
@@ -16,14 +17,30 @@ Item {
         fillMode: Image.PreserveAspectFit
     }
 
+
     Text {
         text: title
+        font.pointSize: 20
         color: "white"
-        anchors.bottom: parent.bottom
+        elide: Text.ElideRight
+        anchors.verticalCenter: parent.verticalCenter
         anchors.left: img.right
         anchors.right: parent.right
         anchors.margins: 5
         horizontalAlignment: Text.AlignRight
     }
-}
 
+    Text {
+        text: "média de type " + type + ""
+        color: "gray"
+        font.pointSize: 15
+        anchors.bottom: parent.bottom
+        anchors.top: title.bottom
+        anchors.left: img.right
+        anchors.right: parent.right
+        anchors.margins: 5
+        horizontalAlignment: Text.AlignRight
+        verticalAlignment: Text.AlignBottom
+        visible: details
+    }
+}
