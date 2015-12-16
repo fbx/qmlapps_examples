@@ -85,7 +85,7 @@ Application {
         }
 
         onErrorChanged: {
-            if (error != MediaPlayer.NoError) {
+            if (error !== MediaPlayer.NoError) {
                 App.notifyUser(errorString);
             }
         }
@@ -101,7 +101,6 @@ Application {
             top: parent.top
             bottom: parent.bottom
         }
-
 
         Loading {
             id: loading
