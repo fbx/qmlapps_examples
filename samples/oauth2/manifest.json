@@ -1,0 +1,14 @@
+{
+    "name": "oauth2",
+    "identifier": "org.example.oauth2",
+    "description": "OAuth 2 example",
+    "capabilities": {
+        "net_wan": "required"
+    },
+    "entryPoints": {
+        "main": {
+            "file": "main.qml",
+            "default": true
+        }
+    }
+}
