@@ -17,8 +17,11 @@ Application {
         text: "appuyez sur une touche de la télécommande ou d'un calvier"
 
         Keys.onPressed: {
-            if (event.key === Qt.Key_Back)
+            if (event.key === Qt.Key_Back) {
+                event.accepted = true;
                 Qt.quit();
+            }
+
             switch (event.key) {
             case Qt.Key_0:
             case Qt.Key_1:
