@@ -1,0 +1,11 @@
+{
+    "name": "qmlkeys",
+    "identifier": "org.example.qmlkeys",
+    "description": "Touches télécommande",
+    "entryPoints": {
+        "main": {
+            "file": "main.qml",
+            "default": true
+        }
+    }
+}
