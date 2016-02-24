@@ -1,0 +1,15 @@
+{
+    "name": "Apple Trailers",
+    "identifier": "org.example.appletrailers",
+    "description": "Les bandes annonces des derniers films",
+    "capabilities": {
+        "net_wan": "required"
+    },
+    "icon": "icon.png",
+    "entryPoints": {
+        "main": {
+            "default": true,
+            "file": "main.qml"
+        }
+    }
+}
