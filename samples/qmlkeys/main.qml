@@ -14,7 +14,7 @@ Application {
         color: "white"
         font.pixelSize: 40
 
-        text: "appuyez sur une touche de la télécommande ou d'un calvier"
+        text: "appuyez sur une touche de la télécommande ou d'un clavier"
 
         Keys.onPressed: {
             if (event.key === Qt.Key_Back) {
