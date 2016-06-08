@@ -1,4 +1,3 @@
-# freeboxos ls
-Mini navigateur de fichier utilisant l'API FreeboxOS.
-
-Utilisation de Shell, du client FreeboxOS, et de App.urlOpen().
+# Freeboxos ls
+Simple and tiny file browser using the FreeboxOS REST API.
+Using modules Shell and FreeboxOS, and the App.urlOpen() call.

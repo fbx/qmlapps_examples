@@ -1,7 +1,5 @@
-# parental
-Mini exemple utilisant les fonction de code parental.
+# Parental Control
+Tiny example using parental control feature.
 
-Le code parental permet de protéger les mineurs de contenu réservé aux
-personnes majeures. Cet exemple teste la fonction mais aucun contenu n'est
-présenté. Seul un message de succès est affiché si le code parental a été
-correctement entré par l'utilisateur.
+Parental code allow to protect children from adult-only content.
+This example tests the functionality but does not display any content.

@@ -1,4 +1,4 @@
-# rss video
-Mini exemple de navigateur de flux RSS de vidéos avec player intégré.
+# Rss Video
+Tiny example of an RSS browser with an integrated video player.
 
-Cet exemple montre l'utilisation du XmlListModel, de MediaPlayer et VideoOutput.
+This example uses XmlListModel, MediaPlayer and VideoOutput.

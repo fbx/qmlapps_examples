@@ -1,11 +1,10 @@
-# url open
-Mini exemple utilisant le module Oauth
+# OAuth 2
+Tiny example using the Oauth module.
 
-Cet exemple demande une connexion OAuth à Google
-afin de pouvoir récupérer en REST des données de Google+.
+This example asks an OAuth connection to Google
+to be able to retrieve some data from Google+.
 
-/!\ ATTENTION /!\
-pour que l'application fonctionne, éditez le fichier secret.js
-avec vos propres identifiants d'application Google que vous
-devrez au préalable créer dans la console de dévelopeur
-d'applications à l'adresse: https://console.developers.google.com
+/!\ WARNING /!\
+The app does not work as is. You must edit the secret.js
+file with your own Google application identifiers.
+See: https://console.developers.google.com

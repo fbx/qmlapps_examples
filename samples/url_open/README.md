@@ -1,5 +1,4 @@
-# url open
-Mini exemple utilisant la fonction App.urlOpen().
+# Url Open
+Tiny example using App.urlOpen().
 
-Cette fonction permet de déléguer la gestion d'un contenu à une autre
-application qui est capable de le gérer.
+This function allows to delegate content management to another application.

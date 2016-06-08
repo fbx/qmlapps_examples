@@ -1,8 +1,6 @@
-# frameswap
-Mini jeu utilisant le signal Application.onFrameSwapped().
+# Framw Swap
+Simple and pointless game using Application.onFrameSwapped().
+This signal is triggered each time a video frame has beed displayed.
 
-Ce signal est déclenché à chaque fin de rendu graphique.
-
-But du jeu: arrêter la balle au centre de l'écran.
-
-Touches: haut, bas, gauche, droite. OK pour recommencer.
+Goal: stop the ball at the center of the screen.
+Buttons: accelerate/decelerate with up, down, left, right. Press OK to start.
