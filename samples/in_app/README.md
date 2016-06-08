@@ -1,4 +1,4 @@
-# in app
+# In-app Purchase
 Tiny example using in-app purchase API.
 
 In this example, not being published in the FreeStore, buyable items are
