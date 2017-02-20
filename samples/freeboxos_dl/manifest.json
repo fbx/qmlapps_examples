@@ -1,0 +1,15 @@
+{
+    "name": "FreeboxOS Downloads",
+    "description": "FreeboxOS downloader sample",
+    "identifier": "org.example.freeboxos-dl",
+    "capabilities": {
+        "net_gw": "required",
+        "gw_downloader": "required"
+    },
+    "entryPoints": {
+        "classic": {
+            "file": "main.qml",
+            "default": true
+        }
+    }
+}
