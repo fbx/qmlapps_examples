@@ -1,0 +1,14 @@
+{
+    "name": "Http",
+    "identifier": "org.example.http",
+    "description": "Exemple Http libfbxqml",
+    "capabilities": {
+        "net_wan": "required"
+    },
+    "entryPoints": {
+        "main": {
+            "file": "main.qml",
+            "default": true
+        }
+    }
+}
