@@ -23,7 +23,7 @@ Application {
         Behavior on opacity { NumberAnimation { duration: 500 } }
 
         model: XmlListModel {
-            source: "http://www.apple.com/trailers/home/xml/current_720p.xml"
+            source: "http://trailers.apple.com/trailers/home/xml/current_720p.xml"
             query: "/records/movieinfo"
             XmlRole { name: "poster"; query: "poster/location/string()" }
             XmlRole { name: "link"; query: "preview/large/string()" }
