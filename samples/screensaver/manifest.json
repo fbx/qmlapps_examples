@@ -1,0 +1,14 @@
+{
+    "name": "Boucing DVD Logo",
+    "identifier": "org.example.boucingDvd",
+    "description": "Boucing DVD Logo",
+    "entryPoints": {
+        "settings": {
+            "file": "settings.qml",
+            "default": true
+        },
+        "screensaver": {
+            "file": "main.qml"
+        }
+    }
+}
