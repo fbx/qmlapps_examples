@@ -1,0 +1,15 @@
+{
+    "name": "miniplay",
+    "identifier": "fr.freebox.miniplay",
+    "description": "miniplay is an awesome player",
+    "entryPoints": {
+        "main": {
+            "file": "miniplay.qml",
+            "default": true
+        }
+    },
+    "capabilities": {
+        "fbxbus": "required",
+        "net_wan": "required"
+    }
+}

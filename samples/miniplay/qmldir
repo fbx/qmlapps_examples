@@ -1,0 +1,3 @@
+VideoError 1.0 video_error.qml
+VideoDebugOsd 1.0 video_debug_osd.qml
+Player 1.0 player.qml
