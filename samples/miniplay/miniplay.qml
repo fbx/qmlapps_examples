@@ -5,6 +5,34 @@ import fbx.cdm 1.0
 import fbx.data 1.0
 
 Application {
+    function widevineIndividualization(message) {
+        let def = new Deferred.Deferred();
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState !== XMLHttpRequest.DONE) {
+                return;
+            }
+
+            if (xhr.status !== 200) {
+                def.reject();
+                return;
+            }
+
+            console.log("response: " + Base64.fromArrayBuffer(xhr.response));
+            def.resolve(xhr.response);
+        }.bind(this);
+        let urlstr = 'https://www.googleapis.com/certificateprovisioning/v1/devicecertificates/create?key=AIzaSyB-5OLKTx2iU5mko18DfdwK5611JIjbUhE&signedRequest=';
+        let bytes = new Uint8Array(message);
+        for (let i = 0; i < bytes.length; i++) {
+            urlstr += String.fromCharCode(bytes[i]);
+        }
+        xhr.open('POST', urlstr);
+        console.log("request: " + Base64.fromArrayBuffer(message));
+        xhr.responseType = "arraybuffer";
+        xhr.send();
+        return def;
+    }
+
     function postMessageDRM_cwip(type, message) {
         let def = new Deferred.Deferred();
         let xhr = new XMLHttpRequest();
@@ -64,6 +92,7 @@ Application {
 
             return mediaKeys.setServerCertificate(serviceCertificate);
         }).then(function(boolret) {
+            mediaKeys.enableDefaultWidevineIndividualizationRequestHandler = false;
             return mediaKeys;
         });
     }
@@ -74,7 +103,12 @@ Application {
 
     function licenseRequestReady(event) {
         let keySession = event.target;
-        postMessageDRM(event.messageType, event.message).then(function(response) {
+
+        let def = (event.messageType === "individualization-request") ?
+            widevineIndividualization(event.message) :
+            postMessageDRM(event.messageType, event.message);
+
+        def.then(function(response) {
             keySession.update(response);
         });
     }
