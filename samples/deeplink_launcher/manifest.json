@@ -1,0 +1,11 @@
+{
+    "name": "Deeplink launcher",
+    "identifier": "org.example.deeplink_launcher",
+    "description": "Simple app to launch a deeplink",
+    "entryPoints": {
+        "main": {
+            "file": "main.qml",
+            "default": true
+        }
+    }
+}
